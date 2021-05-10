@@ -1,6 +1,6 @@
 #!/bin/sh
 
-IDENTIFIER=com.toplessbanana.Loggins
+IDENTIFIER=com.toplessbanana.pkg.Loggins
 VERSION=1.0
 PACKAGE=Loggins.pkg
 CERTIFICATE="Developer ID Installer: Jayson Kish (Z375TYY86Z)"
@@ -19,7 +19,7 @@ cleanProductDirectory
 #
 
 createComponentPackage() {
-	/usr/bin/pkgbuild --root ./Products ./tmp/$1 --identifier $2 --version $3
+	/usr/bin/pkgbuild --root ./Products ./tmp/$1 --scripts ./Scripts --identifier $2 --version $3
 }
 
 createComponentPackage $PACKAGE $IDENTIFIER $VERSION
@@ -39,3 +39,8 @@ notarizeProductArchive() {
 }
 
 notarizeProductArchive $IDENTIFIER $USERNAME $PROVIDER $PACKAGE
+
+#
+
+# Staple the Ticket to Your Distribution
+# /usr/bin/xcrun stapler $PACKAGE

@@ -43,4 +43,4 @@ notarizeProductArchive $IDENTIFIER $USERNAME $PROVIDER $PACKAGE
 #
 
 # Staple the Ticket to Your Distribution
-# /usr/bin/xcrun stapler $PACKAGE
+# /usr/bin/xcrun stapler staple $PACKAGE

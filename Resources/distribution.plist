@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <installer-gui-script minSpecVersion="1">
 <title>Loggins</title>
-    <pkg-ref id="com.toplessbanana.Loggins"/>
+    <pkg-ref id="com.toplessbanana.pkg.Loggins"/>
     <options customize="never" require-scripts="false" hostArchitectures="x86_64,arm64"/>
     <choices-outline>
         <line choice="default">
-            <line choice="com.toplessbanana.Loggins"/>
+            <line choice="com.toplessbanana.pkg.Loggins"/>
         </line>
     </choices-outline>
     <choice id="default"/>
-    <choice id="com.toplessbanana.Loggins" visible="false">
-        <pkg-ref id="com.toplessbanana.Loggins"/>
+    <choice id="com.toplessbanana.pkg.Loggins" visible="false">
+        <pkg-ref id="com.toplessbanana.pkg.Loggins"/>
     </choice>
-    <pkg-ref id="com.toplessbanana.Loggins" version="1.0" onConclusion="none">Loggins.pkg</pkg-ref>
+    <pkg-ref id="com.toplessbanana.pkg.Loggins" version="1.0" onConclusion="none">Loggins.pkg</pkg-ref>
 </installer-gui-script>

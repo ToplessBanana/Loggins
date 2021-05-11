@@ -26,6 +26,16 @@ createComponentPackage $PACKAGE $IDENTIFIER $VERSION
 
 #
 
+synthesizeDistribution() {
+	if [ ! -e "distribution.plist" ]; then
+		/usr/bin/productbuild --synthesize --package ./tmp/$1 distribution.plist
+	fi
+}
+
+synthesizeDistribution $PACKAGE
+
+#
+
 createProductArchive() {
 	/usr/bin/productbuild --distribution distribution.plist --package-path ./tmp $1 --sign $2
 }
@@ -38,9 +48,6 @@ notarizeProductArchive() {
 	/usr/bin/xcrun altool --notarize-app --primary-bundle-id "$1" --username "$2" --password "@keychain:AC_PASSWORD" --asc-provider "$3" --file ./$4
 }
 
-notarizeProductArchive $IDENTIFIER $USERNAME $PROVIDER $PACKAGE
+# notarizeProductArchive $IDENTIFIER $USERNAME $PROVIDER $PACKAGE
 
 #
-
-# Staple the Ticket to Your Distribution
-# /usr/bin/xcrun stapler staple $PACKAGE

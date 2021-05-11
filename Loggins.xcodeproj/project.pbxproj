@@ -28,6 +28,7 @@
 		7514982C26422273002E4498 /* package.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = package.sh; sourceTree = "<group>"; };
 		75B0C2BF2641B98500580B76 /* xcode_preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xcode_preview.png; sourceTree = "<group>"; };
 		75B0C2C02641B9BD00580B76 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		75EEA80A264A128A00F77377 /* remove.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = remove.sh; sourceTree = "<group>"; };
 		75F9B99526408D05009B4EFD /* Loggins */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Loggins; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F9B99826408D05009B4EFD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,6 +48,7 @@
 		7514982A26422263002E4498 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				75EEA80A264A128A00F77377 /* remove.sh */,
 				7514982B26422273002E4498 /* distribution.plist */,
 				7514982C26422273002E4498 /* package.sh */,
 			);
